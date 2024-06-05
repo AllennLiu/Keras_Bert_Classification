@@ -36,6 +36,7 @@ keras-bert-classification/
 #### `THUCNews` 數據集
 下載下來的大型數據集共有 `14` 個類別標籤，分別為：
 财经、时尚、科技、教育、彩票、星座、家居、游戏、股票、社会、房产、时政、体育、娱乐。
+
 每個類別數據量不是平均分配，有的多有的少，使用 `find THUCNews -name "*.txt" | wc -l` 獲取數據量**共 `836075` 筆**
 
   - **BERT `chinese_L-12_H-768_A-12`** 預訓練模型下載：https://storage.googleapis.com/bert_models/2018_11_03/chinese_L-12_H-768_A-12.zip
@@ -61,14 +62,14 @@ keras-bert-classification/
 
 ## 環境配置
 
-  1. 請使用版本 `Python 3.9+`。
+1. 請使用版本 `Python 3.9+`。
 
     ```bash
     python -V
     Python 3.9.11
     ```
 
-  2. 安裝依賴：
+2. 安裝 `PyPi` 依賴
 
     ```bash
     python3 -m pip install -r requirements.txt
