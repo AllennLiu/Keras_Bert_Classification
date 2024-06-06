@@ -1,9 +1,9 @@
 import pandas as pd
 from typing import Union
 from fine_tune import TRAINED_MODEL_CKPT
-from predict import timeit, predict_single
 from keras_bert import get_custom_objects
 from keras.models import load_model, Model
+from predict import timeit, predict_single
 from argparse import ArgumentParser, Namespace
 from sklearn.metrics import classification_report
 
@@ -13,7 +13,7 @@ def evaluate(model: Model, df: pd.DataFrame) -> Union[str, dict]:
     for i in range(df.shape[0]):
         print(f'Predict {i + 1} samples')
         true_y, content = df.iloc[i, :]
-        pred_y = predict_single(model, content)
+        pred_y = predict_single(model, content)[0]
         true_y_list.append(true_y)
         pred_y_list.append(pred_y)
 
